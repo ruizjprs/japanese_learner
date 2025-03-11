@@ -7,8 +7,8 @@ int main(){
     while(play){
         std::string input = "";
         std::cout<< "Chose an option" << std::endl;
-        std::cout<< "1. English to Japanese" << std::endl;
-        // [TODO] std::cout<< "2. Japanese to English" << std::endl;
+        std::cout<< "1. Japanese to Romaji Kanji" << std::endl;
+        std::cout<< "2. English to Japanese Kanji" << std::endl;
         std::cout<< "press q to exit" << std::endl;
         std::getline(std::cin, input);
         if(input == "q"){

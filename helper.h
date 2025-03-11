@@ -1,31 +1,43 @@
 #include <unordered_map>
 #include <string>
 #include <vector>
-#include  <utility>
+#include <utility>
 
-
-namespace helper{
+namespace helper {
 
 void print();
 
-
-static std::vector<std::pair<std::string, std::string >> english_to_japanese_kanji =
+static std::vector<std::pair<std::string, std::string>> japanese_to_romaji_kanji =
 {
-    {"nichi" , "日"},
-    {"tsuki", "月"},
-    {"hi", "火"},
-    {"mizu", "水"},
-    {"ki", "木"},
-    {"kin", "金"},
-    {"do", "土"},
-    {"ten", "天"},
-    {"yama", "山"},
-    {"kawa", "川"},
-    {"hito", "人"},
-    {"ame", "雨"}
-}; 
+    {"日", "nichi"},
+    {"月", "tsuki"},
+    {"火", "hi"},
+    {"水", "mizu"},
+    {"木", "ki"},
+    {"金", "kin"},
+    {"土", "do"},
+    {"天", "ten"},
+    {"山", "yama"},
+    {"川", "kawa"},
+    {"人", "hito"},
+    {"雨", "ame"}
+};
 
-
+static std::vector<std::pair<std::string, std::string>> english_japanese_kanji =
+{
+    {"day","日"},
+    {"moon", "月"},
+    {"fire", "火"},
+    {"water", "水"},
+    {"tree", "木"},
+    {"gold", "金"},
+    {"soil", "土"},
+    {"heaven", "天"},
+    {"mountain", "山"},
+    {"river", "川"},
+    {"person", "人"},
+    {"rain", "雨"}
+};
 
 void play_game(int option);
 

@@ -10,13 +10,19 @@ void helper::play_game(int option){
     std::vector<std::pair<std::string, std::string >> test_vector;
 
     if(option == 1){
-        test_vector = helper::english_to_japanese_kanji;
+        std::cout << "Japanese to Romaji Kanji game" << std::endl;
+        std::cout << "Type the romaji equivalent of the following kanji" << std::endl;
+        test_vector = helper::japanese_to_romaji_kanji;
+    }
+    else if (option == 2){
+        std::cout << "English to Japanese Kanjigame" << std::endl;
+        std::cout << "Type the kanji equivalent of the following English word" << std::endl;
+        test_vector = helper::english_japanese_kanji;
     }
     else{
         std::cout << "invalid option" << std::endl;
         return;
     }
-    std::cout << "japanese to english game" << std::endl;
 
     bool finished = false;
     while(!finished){
@@ -28,9 +34,10 @@ void helper::play_game(int option){
         int randomIndex = rand() % test_vector.size();
         std::cout << "Remaining:  " << test_vector.size() << std::endl;
         auto i = test_vector[randomIndex];
-        std::cout << i.second << std::endl;
+        std::cout << i.first << std::endl;
+        std::cout << "Enter answer: ";
         std::getline(std::cin, input);
-        if(input == i.first){
+        if(input == i.second){
             std::cout << "correct" << std::endl;
             test_vector.erase(test_vector.begin() + randomIndex);
         }
